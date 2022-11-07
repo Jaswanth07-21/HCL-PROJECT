@@ -1,0 +1,50 @@
+/*
+SQLyog Enterprise - MySQL GUI v6.56
+MySQL - 5.5.5-10.4.21-MariaDB : Database - livechart
+*********************************************************************
+*/
+/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET SQL_MODE=''*/;
+
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+CREATE DATABASE /*!32312 IF NOT EXISTS*/`livechart` /*!40100 DEFAULT CHARACTER SET utf8mb4 */;
+
+USE `livechart`;
+
+/*Table structure for table `userdata` */
+
+DROP TABLE IF EXISTS `userdata`;
+
+CREATE TABLE `userdata` (
+  `Id` int(100) NOT NULL AUTO_INCREMENT,
+  `UserName` varchar(200) DEFAULT NULL,
+  `UserEmail` varchar(200) DEFAULT NULL,
+  `Age` varchar(200) DEFAULT NULL,
+  `Contact` varchar(200) DEFAULT NULL,
+  `Password` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `userdata` */
+
+/*Table structure for table `usermessages` */
+
+DROP TABLE IF EXISTS `usermessages`;
+
+CREATE TABLE `usermessages` (
+  `Id` int(200) NOT NULL AUTO_INCREMENT,
+  `Email` varchar(200) DEFAULT NULL,
+  `Message` varchar(200) DEFAULT NULL,
+  `Time` varchar(200) DEFAULT NULL,
+  PRIMARY KEY (`Id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4;
+
+/*Data for the table `usermessages` */
+
+insert  into `usermessages`(`Id`,`Email`,`Message`,`Time`) values (1,'mouli@gmail.com','hi hello hi how are you hello hello hello','13:20 PM'),(2,'vamsi@gmail.com','I am all bro nice to meet you','13:20 PM'),(3,'mouli@gmail.com','hello sir have a nice day','13:34 PM');
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
